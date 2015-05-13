@@ -8,7 +8,7 @@ This is for Uber's Food Truck coding challenge. The goal was to create a service
 
 The data are gathered directly from an [OpenData API](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat?) in JSON using client-side JavaScript. This means that the system may be rate limited, as no API key is used (there is no way to obscure it). The application is run on a simple Ruby/Rack server. This solution did not necessitate a back-end, and so this seemed a reasonable approach.
 
-Aside from the Google maps API, two libraries have been included for expedience: jQuery and Twitter Bootstrap. The former was used to obtain the data in JSON format; the latter to simplify the layout. If I had more time, I would remove Bootstrap.
+Aside from the Google maps API, two libraries have been included for expedience: jQuery and Twitter Bootstrap. The former was used to obtain the data in JSON format; the latter to simplify the layout.
 
 ##Usage
 
@@ -18,7 +18,11 @@ Once loaded, the map will be centered on either the user's current location (if 
 - Clicking on a marker will display some information about the truck/cart.
 - A new location can be selected by simply clicking on the map, re-centering it and possibly displaying new markers.
 
+*Why not just show all of them?* So the user is not overwhelmed by choices.
+
 ###Notes/Confessions
+If I had more time, I would remove Bootstrap, fine-tune the field of view for markers, and add custom marker images.
+
 - JavaScript is not currently a strong point of mine. I am not yet familiar with testing frameworks for it.
 - I have never worked with maps or map data before.
 - I probably should have just done a text-only readout, and used Rails, a database, and TDD.
